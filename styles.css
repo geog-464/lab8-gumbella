@@ -1,79 +1,44 @@
-/* CSS Document */
+/*CSS Style Sheet */
 
-/*cute google fonts import*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Mono:wght@300&display=swap');
 
 body {
-	/* these are variables in CSS. Not everyone uses them, but they make quick changes much faster */
-	--main-bkg-color: #000;
-	--bkg-color1: #8CCDFF;	
-	--bkg-color2: #548fbb;
-	--bkg-color3: #8089FF;
-	--nav-title-color: #364d4d;
-	--main-text-color: #364d4d;
-	--link-color: #363EB3;
-	--tag-color: #7dbfd3;
-	--hover-color: black;
-	--hover-bg-color: pink;
-	--selection-color: yellow;
-	
-	--map-selection-color: #ed8266;
-	--font-multiplier: 1.2;
-	--content-gap: 1em;
-	--item-gap: 0.2em;
-	--default-item-color: rgb(200,200,200);
+
+	background-image: linear-gradient(to bottom right, #39D68C, #08D5D5);
 	--navheight: 10vh;
 	
-	background-color: var(--main-bkg-color);
-    box-sizing: border-box;
-    z-index: 1;
-    margin: auto 0; 
-	height: 100%;
-	font-size: 16px;
-	overflow: hidden;
+
 }
 
+
 h1 {
-	font-family: 'Roboto Mono', monospace;
-	color: var(--nav-title-color);
-	font-size: 30px;
+	font-family: 'Garamond', serif;
+	color: #000;
+	font-size: 35px;
 	font-weight: bold;
 	margin: 0px 0px 0px 0px;
 	text-align: center;
 	line-height: normal;
+	text-shadow: 2px 2px 5px #11452D;
 }
 
-h2 {
+p{
+	font-family: 'Garamond', serif;
+	color: #000;
+	font-size: 25px;
 }
-h3 {
-}
-h4 {
-}
-p {
-	font-family: 'Roboto Mono', monospace;
-	color: var(--main-text-color);
-	font-size: calc(var(--font-multiplier) * 1em);
-	font-weight: regular;
-	padding:0px 0px 0px 0px;
-}
-
-button {
+li {
+	font-family: 'Garamond', serif;
+	font-size: 18px;
 }
 
 footer {
-  	height: 60px;
-    width: 80%;
-	font-weight: bold;
-    text-align: left;
-    position: absolute;
-    bottom: 0px;
-    left: 0px; 
-	padding: 15px;
+	font-family: 'Garamond', serif;
+	font-size: 15px;
+
 }
 
-/* main */
 
-.splash-grid-container {
+.style-grid-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: auto auto auto;
@@ -86,38 +51,42 @@ footer {
 	margin: 15px;
 }
 
-#splash-grid {
+#style-grid {
 	/*zilch*/
 }
 
-#splash-item1 {
+#style1 {
+	
+	padding: 10px;
+	border-radius: 15px;
+	background-color: #83E5B7;
+	width: 50%;
+	margin-left: 25%; 
+}
+
+#style2 {
 	grid-column: 1 / span 2;
 	grid-row: 1 / span 1;
-	padding: 15px;
+	padding: 10px;
 	border-radius: 10px;
-	background-color: var(--bkg-color1);
+	background-color: #B7DED0;
+	
+	
+
 }
 
-#splash-item2 {
+#style3{
 	grid-column: 1 / span 2;
-	grid-row: 2 / span 1;
-	padding: 15px;
-	background-color: var(--bkg-color2);
+	grid-row: 2 / span 2;
+	padding: 10px;
 	border-radius: 10px;
+	background-color: #B7DED0;
+	
+	
 }
 
-#splash-item3 {
-	grid-column: 1 / span 5;
-	grid-row: 3 / span 1;
-	padding: 15px;
-	background-color: var(--bkg-color3);
-	margin-right: 50px;
-	margin-bottom: 100px;
-	border-radius: 10px;
-}
-
-#splash-item5  {
-	grid-column: 3 / span 3;
+#style5  {
+	grid-column: 3 / span 2;
 	grid-row: 1 / span 2;
 	padding: 15px;
 	/*background-color: var(--bkg-color2);*/
@@ -127,74 +96,9 @@ footer {
 	width: 100%;
 	border-radius: 10px;
 	transition: 1.5s;
+	right: 15px;
 }
 
-
-.grid-container {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto 1fr;
-	grid-auto-rows: auto;
-	border-bottom: 20px solid var(--main-bkg-color);
-	width: 100%;
-	grid-template-areas: 'header' 'main';
-}
-
-
-
-/* firefox-only scrollbar class to use in divs */
-.scroller {
-	scrollbar-color: var(--default-item-color) var(--main-bkg-color);
-	scrollbar-width: thin;
-}
-.scroller2 {
-	scrollbar-color: var(--default-item-color) var(--main-bkg-color);
-	scrollbar-width: thin;
-	overflow-y: scroll;
-	overflow-x: hidden;
-}
-/* chrome default scrollbar styles */
-::-webkit-scrollbar {
-    width: 0.7em;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--default-item-color);
-}
-
-
-
-/*other*/
-
-.highlight {
-	background-color: var(--button-color);
-	color: var(--hover-color) !important;
-	border-color: black !important;
-}
-h3 > .highlight {
-	background-color: var(--main-text-color);
-	color: var(--hover-color) !important;
-	border-color: black !important;
-}
-
-.highlight2 {
-	color: var(--hover-color) !important;
-}
-
-
-
-/* mainid */
-
-#mainid {
-	height: 93%;
-	width: 100%;
-	/*position: absolute;*/
-	left: 0px;
-    z-index: 1;
-	border-top-right-radius: 20px;
-}
-
-/* nav */
 
 ul.navbar{
     list-style-type: none;
@@ -209,84 +113,21 @@ ul.navbar{
     float: right;
 }
 
-li {
-	font-family: 'Roboto Mono', monospace;
-	color: var(--main-text-color);
-	font-size: calc(var(--font-multiplier) * 1em);
-	font-weight: regular;
-	padding: 0px 0px 0px 0px;
-}
 
 .navbar li a {
-	font-family: 'Roboto Mono', monospace;
-    display: block;
-    color: var(--link-color);
+	font-family: 'Garamond', monospace;
+    display: inline;
+    color: #11452D;
     text-decoration: none;
 	padding: calc(var(--navheight)/4);
 	height: calc(var(--navheight)/2);
 }
 
 a {
-	color: var(--link-color);
+	color: #B7DED0;
 }
 
 a:hover {
-    background-color: var(--hover-bg-color);
-	color:  var(--hover-color);
+    background-color: #B7DED0 ;
+	color:  #B7DED0;
 }
-
-#title {
-	float: left;
-	display: inline-block;
-}
-#logo {
-	height: 80%;
-	width: auto;
-	margin: auto;
-}
-
-
-
-
-/** scrollbar **/
-
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  font-family: 'Roboto Mono', monospace;
-  color: rgb(200,200,200);
-  font-size: calc(var(--font-multiplier) * 16px);
-}
-::-moz-placeholder { /* Firefox 19+ */
-  font-family: 'Roboto Mono', monospace;
-  color: rgb(200,200,200);
-  font-size: calc(var(--font-multiplier) * 16px);
-}
-:-ms-input-placeholder { /* IE 10+ */
-  font-family: 'Roboto Mono', monospace;
-  color: rgb(200,200,200);
-  font-size: calc(var(--font-multiplier) * 16px);
-}
-:-moz-placeholder { /* Firefox 18- */
-  font-family: 'Roboto Mono', monospace;
-  color: rgb(200,200,200);
-  font-size: calc(var(--font-multiplier) * 16px);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
